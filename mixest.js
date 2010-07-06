@@ -8,11 +8,14 @@
 
 (function () {
     if($){
-	var audio = $("#jqjp_audio_0").val()
-	var download = $("<a />", {
-	    html: "&#x21E3",
-	    href: audio,
+	
+	var download = $("<a />", {html: "&#x21E3;", href: ""})
+	download.click(function(e){
+	    var url = $("#jqjp_audio_0").attr("src")
+	    download.attr("href", url)
 	});
-	$("#fave-panel").append(download);
+
+	$("#fave-panel").append(download)
+	
     }
 })();
